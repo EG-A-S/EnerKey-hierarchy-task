@@ -25,14 +25,15 @@ export function getExampleHierarchy(): Meter[] {
       facilityId: 4,
       name: 'mittari 5',
       subMeters: [
-        { id: 12, name: 'Meter 12', facilityId: 4 },
-        { id: 13, name: 'Meter 13', facilityId: 4 }
+        { id: 12, name: 'Meter 12', facilityId: 4, subMeters: undefined },
+        { id: 13, name: 'Meter 13', facilityId: 4, subMeters: undefined }
       ]
     },
     {
       id: 9,
       facilityId: 101,
-      name: 'm 8'
+      name: 'm 8',
+      subMeters: undefined,
     },
     {
       id: 11,
@@ -44,9 +45,9 @@ export function getExampleHierarchy(): Meter[] {
           name: 'M33',
           facilityId: 88,
           subMeters: [
-            { id: 45, name: 'meter45', facilityId: 88 },
-            { id: 46, name: 'meter46', facilityId: 88 },
-            { id: 48, name: 'meter48', facilityId: 88 }
+            { id: 45, name: 'meter45', facilityId: 88, subMeters: undefined },
+            { id: 46, name: 'meter46', facilityId: 88, subMeters: undefined },
+            { id: 48, name: 'meter48', facilityId: 88, subMeters: undefined }
           ]
         }
       ]
@@ -54,7 +55,8 @@ export function getExampleHierarchy(): Meter[] {
     {
       id: 55,
       name: 'Mittari 55',
-      facilityId: 400
+      facilityId: 400,
+      subMeters: undefined,
     }
   ];
 }
