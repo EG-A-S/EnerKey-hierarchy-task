@@ -101,6 +101,7 @@ describe('MeterHierarchyHelpers', () => {
           facilityId: 4,
           name: 'mittari 5',
           subMeters: [
+            { id: 12, name: 'Meter 12', facilityId: 4, subMeters: undefined },
             { id: 13, name: 'Meter 13', facilityId: 4, subMeters: undefined }
           ]
         },
@@ -122,7 +123,6 @@ describe('MeterHierarchyHelpers', () => {
               subMeters: [
                 { id: 45, name: 'meter45', facilityId: 88, subMeters: undefined },
                 { id: 46, name: 'meter46', facilityId: 88, subMeters: undefined },
-                { id: 48, name: 'meter48', facilityId: 88, subMeters: undefined }
               ]
             }
           ]
@@ -135,7 +135,7 @@ describe('MeterHierarchyHelpers', () => {
         }
       ];
 
-      expect(helpers.getHierarchyWithoutMeter(hierarchy, 12)).toEqual(expectedHierarchy);
+      expect(helpers.getHierarchyWithoutMeter(hierarchy, 48)).toEqual(expectedHierarchy);
     });
   });
 
