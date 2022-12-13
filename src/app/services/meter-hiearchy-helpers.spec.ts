@@ -140,7 +140,8 @@ describe('MeterHierarchyHelpers', () => {
   });
 
   afterEach(() => {
-    // Check that operations did not have side effects
-    expect(hierarchy).toEqual(helpers.getExampleHierarchy());
+    expect(hierarchy)
+      .withContext('Original array must not be mutated')
+      .toEqual(helpers.getExampleHierarchy());
   });
 });
